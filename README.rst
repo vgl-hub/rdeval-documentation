@@ -1,9 +1,5 @@
-Template for the Read the Docs tutorial
+Read The Docs documentation for rdeval
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
-
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+Rdeval repository is available [here](https://github.com/vgl-hub/rdeval) 
+Documentation is available [here](https://rdeval-documentation.readthedocs.io/en/latest/index.html)
