@@ -21,7 +21,7 @@ To use rdeval, you can either:
 Compilation from source
 =======================
 
-To compile rdeval you need the libraries listed in the `dependency section <Dependencies>` correctly installed under your path, and then simply run the following command in rdeval's main folder:
+To compile rdeval you need the libraries listed in the :ref:`dependency section <Dependencies>` correctly installed under your path, and then simply run the following command in rdeval's main folder:
 
 .. code-block:: console
 
