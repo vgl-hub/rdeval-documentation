@@ -9,10 +9,12 @@ Installation
 Dependencies
 ============
 Rdeval relies on two libraries that should be correctly installed in your system:
+
 * Openssl, to compute md5sums
 * htslib, to work with BAM and CRAM files
 
 To use rdeval, you can either:
+
 * download precompiled builds for your platform from the latest release `here <https://github.com/vgl-hub/rdeval/releases>`_
 * compile it from source
 
