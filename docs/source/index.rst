@@ -1,6 +1,7 @@
-.. image:: ../docs/images/gfastar_logo_thumbnail.png
+.. image:: images/gfastar_logo_thumbnail.png
   :width: 200
   :alt: gfastar logo
+  :align: center
 
 Welcome to rdeval's documentation!
 ===================================
