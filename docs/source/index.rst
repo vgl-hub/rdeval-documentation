@@ -1,4 +1,4 @@
-.. image:: gfastar_logo_thumbnail.png
+.. image:: _images/gfastar_logo_thumbnail.png
   :width: 200
   :alt: gfastar logo
   :align: center
