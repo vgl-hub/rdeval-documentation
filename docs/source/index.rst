@@ -1,3 +1,7 @@
+.. image:: ../docs/images/gfastar_logo_thumbnail.png
+  :width: 200
+  :alt: gfastar logo
+
 Welcome to rdeval's documentation!
 ===================================
 
