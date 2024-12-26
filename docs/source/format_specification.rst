@@ -19,10 +19,12 @@ The header contains information the files that went into the generation of the s
 
 Data
 ======
-The header is followed by a binary uint64 with the size of the following uncompressed data. Data follows as gzip-compressed binary data structured as follows:
+The header is followed by a binary uint64 with the size of the uncompressed data. Data follows as gzip-compressed binary data structured as:
+
 .. csv-table:: Data specification
    :file: data.csv
    :header-rows: 1
-len8,len16,len64 help compression after different scenarios and refer to specialized data structures to store each individual read length/quality pair. These are contiguous pairs for each read of uint8/uint16/uint64 (read length) and float (read quality).
 
-Examples of how to read .rd files are provided for C/C++ and R `here <https://github.com/vgl-hub/rdeval/src/reads.cpp>`_ and `here <https://github.com/vgl-hub/rdeval/rdeval_interface.R>`_.
+len8, len16, len64 help compression under different scenarios of read length distribution, and refer to specialized data structures to store each individual read length/quality pair. These are contiguous pairs for each read of uint8/uint16/uint64 (read length) and float (read quality). Reads are pre-sorted descending by size and then by quality
+
+Examples of how to read .rd files are provided for C/C++ and R `here <https://github.com/vgl-hub/rdeval/blob/main/src/reads.cpp>`_ and `here <https://github.com/vgl-hub/rdeval/blob/main/rdeval_interface.R>`_.
