@@ -1,0 +1,12 @@
+entry,type,# bytes
+A count,uint64,8
+C count,uint64,8
+G count,uint64,8
+T count,uint64,8
+N count,uint64,8
+len8 count,uint64,8
+len16 count,uint64,8
+len64 count,uint64,8
+read8,uint8+float,len8 count*8
+read16,uint16+float,len16 count*8
+read64,uint64+float,len64 count*16

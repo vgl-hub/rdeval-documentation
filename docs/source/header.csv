@@ -1,0 +1,5 @@
+entry,type,# bytes
+filename length,uint16,2
+filename,char,1*char
+md5 length,uint16,2
+md5,char,1*char

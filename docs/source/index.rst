@@ -10,6 +10,7 @@ Welcome to rdeval's documentation!
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation <Installation>` the project.
+A description of rdeval's .rd file format can be found in the :doc:`format specification section <format_specification>`.
 
 .. note::
 
