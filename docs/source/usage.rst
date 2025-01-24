@@ -10,7 +10,7 @@ Rdeval relies on three libraries that should be correctly installed in your syst
 
 * `Openssl <https://www.openssl.org/>`_, to compute md5sums
 * `Htslib <https://github.com/samtools/htslib>`_, to work with BAM and CRAM files
-* `zlib <https://github.com/madler/zlib>_`
+* `zlib <https://github.com/madler/zlib>`_
 
 To use rdeval, you can either:
 
