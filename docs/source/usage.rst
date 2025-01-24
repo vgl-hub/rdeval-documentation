@@ -41,7 +41,7 @@ Useful commands
 ***************
 
 Help and Usage:
----------------
+===============
 To see a list of the useage of rdeval:
 
 .. code-block:: console
@@ -49,19 +49,19 @@ To see a list of the useage of rdeval:
    rdeval --help
 
 Output size list:
------------------
+=================
 .. code-block:: console
 
    redval -s
 
 To generate stats:
-------------------
+==================
 .. code-block:: console
 
    rdeval /path/to/data > /path/to/outfile.stats
 
 To obtain a distribution of quality length:
--------------------------------------------
+===========================================
 .. code-block:: console
 
    rdeval testfiles/random1.fastq -ql
