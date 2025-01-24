@@ -42,7 +42,7 @@ Useful commands
 
 Help and Usage:
 ===============
-To see a list of the useage of rdeval:
+To see a list of the usage of rdeval:
 
 .. code-block:: console
 
@@ -66,4 +66,4 @@ To obtain a distribution of quality length:
 
    rdeval testfiles/random1.fastq -ql
 
-Other command options are available by using the :ref:`--help <Help and Usage>` function, described above.
+Other command options are available by using the :ref:`help <Help and Usage>` function, described above.
