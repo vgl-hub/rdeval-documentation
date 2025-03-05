@@ -10,7 +10,7 @@ Rdeval relies on three libraries that should be correctly installed in your syst
 
 * `Openssl <https://www.openssl.org/>`_, to compute md5sums
 * `Htslib <https://github.com/samtools/htslib>`_, to work with BAM and CRAM files
-* `zlib <https://github.com/madler/zlib>`_
+* `zlib <https://github.com/madler/zlib>`_, required for the gzip compression and decompression
 
 To use rdeval, you can either:
 
@@ -65,5 +65,17 @@ To obtain a distribution of quality length:
 .. code-block:: console
 
    rdeval testfiles/random1.fastq -ql
+
+To generate a pre-read report:
+==============================
+.. code-block:: console
+
+   rdeval --sequence-report /path/to/testFiles/random1.fasta
+
+To generate a HTML file:
+========================
+.. code-block:: console
+
+   R -e "rmarkdown::render('${RDEVAL}/figures.Rmd', output_file='[output].html')" --args "[rd-file-1].rd" "[rd-file-2].rd"
 
 Other command options are available by using the :ref:`help <Help and Usage>` function, described above.
