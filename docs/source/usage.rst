@@ -48,11 +48,20 @@ To see a list of the usage of rdeval:
 
    rdeval --help
 
-Output size list:
+Output size list, based on unsorted ('u'), sorted ('s'), histogram ('h') or inverse cumulative table ('c') [-s/--out-size]:
 =================
 .. code-block:: console
 
-   redval -s
+   redval -s u /path/to/testfiles/random1.fastq
+   redval -s s /path/to/testfiles/random1.fastq
+   redval -s h /path/to/testfiles/random1.fastq
+   redval -s c /path/to/testfiles/random1.fastq
+
+To generate a read summary:
+===========================
+.. code-block:: console
+
+   rdeval -r /path/to/testFiles/random1.fasta
 
 To generate stats:
 ==================
@@ -60,22 +69,76 @@ To generate stats:
 
    rdeval /path/to/data > /path/to/outfile.stats
 
-To obtain a distribution of quality length:
-===========================================
+To obtain a distribution of quality for each read (c) or both length and quality(l):
+====================================================================================
 .. code-block:: console
 
-   rdeval testfiles/random1.fastq -ql
+   rdeval /path/to/testfiles/random1.fastq -q c
+   rdeval /path/to/testfiles/random1.fastq -q l
 
-To generate a pre-read report:
+To generate a per-read report:
 ==============================
 .. code-block:: console
 
    rdeval --sequence-report /path/to/testFiles/random1.fasta
 
+To filter the reads to be assessed, by length ('l') or quality ('q'), or both:
+==============================================================================
+.. code-block:: console
+
+   rdeval -f 'l>10' /path/to/testFiles/random1.fasta
+   rdeval -f 'q>10' /path/to/testFiles/random1.fasta
+   rdeval -f 'l>10 & q>10' /path/to/testFiles/random1.fasta
+
+To exclude data from analysis, based on read header information in a list [-e/--exclude-list]:
+==========================================================================
+.. code-block:: console
+
+   rdeval -e header.txt /path/to/testFiles/random1.fasta
+
+To include data in the analysis, based on read header information in a list [-i/include-list]:
+==========================================================================
+.. code-block:: console
+
+   rdeval -i header.txt /path/to/testFiles/random1.fasta
+
+To write reads to a file or generate an rd summary file (output options: fa*[.gz], bam, cram, rd):
+========================================================
+.. code-block:: console
+
+   rdeval -o output1.fa /path/to/testFiles/random1.fastq
+
+To compress all the homopolymers longer than 'n' in the input:
+==============================================================
+.. code-block:: console
+
+   rdeval --homopolymer-compress 1 /path/to/testFiles/random1.fastq
+
+To subsample reads (requires an float between 0 and 1):
+===================
+.. code-block:: console
+    rdeval --sample 0.5 /path/to/testFiles/random1.fastq
+
+To make subsampling reproducible, use the '--random-seed <int>' option:
+===================
+.. code-block:: console
+    rdeval --sample 0.5 --random-seed 1 /path/to/testFiles/random1.fastq
+
+To print md5 of a .rd file:
+===========================
+.. code-block:: console
+   rdeval --md5 /path/to/testFiles/random2.rd
+
 To generate a HTML file:
 ========================
+This requires the following packages also be installed: tidyverse (v2.0.0), ggExtra (v0.10.1), bit64 (v4.5.2)
 .. code-block:: console
 
    R -e "rmarkdown::render('${RDEVAL}/figures.Rmd', output_file='[output].html')" --args "[rd-file-1].rd" "[rd-file-2].rd"
+
+To display the software version number [-v/--version]:
+=======================================
+.. code-block:: console
+   rdeval -v 
 
 Other command options are available by using the :ref:`help <Help and Usage>` function, described above.
