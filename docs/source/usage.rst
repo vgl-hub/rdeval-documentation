@@ -135,6 +135,7 @@ To print md5 of a .rd file:
 To generate a HTML file:
 ========================
 This requires the following packages also be installed: tidyverse (v2.0.0), ggExtra (v0.10.1), bit64 (v4.5.2)
+
 .. code-block:: console
 
    R -e "rmarkdown::render('${RDEVAL}/figures.Rmd', output_file='[output].html')" --args "[rd-file-1].rd" "[rd-file-2].rd"
