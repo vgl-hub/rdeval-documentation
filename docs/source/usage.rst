@@ -117,16 +117,19 @@ To compress all the homopolymers longer than 'n' in the input:
 To subsample reads (requires an float between 0 and 1):
 ===================
 .. code-block:: console
+
     rdeval --sample 0.5 /path/to/testFiles/random1.fastq
 
 To make subsampling reproducible, use the '--random-seed <int>' option:
 ===================
 .. code-block:: console
+
     rdeval --sample 0.5 --random-seed 1 /path/to/testFiles/random1.fastq
 
 To print md5 of a .rd file:
 ===========================
 .. code-block:: console
+
    rdeval --md5 /path/to/testFiles/random2.rd
 
 To generate a HTML file:
