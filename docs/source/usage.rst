@@ -52,10 +52,10 @@ Output size list, based on unsorted ('u'), sorted ('s'), histogram ('h') or inve
 =================
 .. code-block:: console
 
-   redval -s u /path/to/testfiles/random1.fastq
-   redval -s s /path/to/testfiles/random1.fastq
-   redval -s h /path/to/testfiles/random1.fastq
-   redval -s c /path/to/testfiles/random1.fastq
+   rdeval -s u /path/to/testfiles/random1.fastq
+   rdeval -s s /path/to/testfiles/random1.fastq
+   rdeval -s h /path/to/testfiles/random1.fastq
+   rdeval -s c /path/to/testfiles/random1.fastq
 
 To generate a read summary:
 ===========================
@@ -134,7 +134,7 @@ To print md5 of a .rd file:
 
 To generate a HTML file:
 ========================
-This requires the following packages also be installed: tidyverse (v2.0.0), ggExtra (v0.10.1), bit64 (v4.5.2)
+This requires the following packages also be installed: tidyverse (v2.0.0), ggExtra (v0.10.1), bit64 (v4.5.2). Please note, the paths for the [output_file] and the [args] need to be hardcoded.
 
 .. code-block:: console
 
