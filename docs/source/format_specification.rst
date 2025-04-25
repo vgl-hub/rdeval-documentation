@@ -1,9 +1,9 @@
-Rdeval sketches format specification
+Rdeval snapshot format specification
 #####
 
 Introduction
 ************
-Rdeval can optionally generate read 'sketches', i.e. highly condensed representation of relevant read features that can then be stored in rdeval's own highly compressed .rd files, which are described hereafter.
+Rdeval can optionally generate read 'snapshots', i.e. highly condensed representation of relevant read features that can then be stored in rdeval's own highly compressed .rd files, which are described hereafter.
 
 .rd file format specification
 *****************************
@@ -11,7 +11,7 @@ An .rd file is currently made of a binary header followed by a gzip-compressed b
 
 Header
 ======
-The header contains information the files that went into the generation of the sketch file along with their md5sum values. The first 4 bytes correspond to a uint32 with the # files, followed by the following structure for each file:
+The header contains information the files that went into the generation of the snapshot file along with their md5sum values. The first 4 bytes correspond to a uint32 with the # files, followed by the following structure for each file:
 
 .. csv-table:: Header specification
    :file: header.csv
