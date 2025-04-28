@@ -48,6 +48,30 @@ Before using rdeval, you will need to activate the conda environment created, us
 
    conda activate rdeval
 
+To use rdeval with the static linked binary (linux distrabution only)
+======================================================================
+
+This static binary file is availble as a .zip file on the Releases page for rdeval (https://github.com/vgl-hub/rdeval/releases). To use this binary file:
+
+Download the binary .zip file to your linux machine.
+Unzip the .zip file:
+
+.. code-block:: console
+
+   unzip rdeval.v0.0.6-linux-static.zip
+
+Make the unzipped binary file executable:
+
+.. code-block:: console
+
+   chmod +x rdeval_static_binary
+
+Run the executable binary file:
+
+.. code-block:: console
+
+   ./rdeval_static_binary rdeval/testFiles/random1.fasta
+
 
 Troubleshooting the Installation
 ================================
@@ -75,16 +99,16 @@ Output size list, based on unsorted ('u'), sorted ('s'), histogram ('h') or inve
 =================
 .. code-block:: console
 
-   rdeval -s u /path/to/testfiles/random1.fastq
-   rdeval -s s /path/to/testfiles/random1.fastq
-   rdeval -s h /path/to/testfiles/random1.fastq
-   rdeval -s c /path/to/testfiles/random1.fastq
+   rdeval -s u rdeval/testFiles/random1.fastq
+   rdeval -s s rdeval/testFiles/random1.fastq
+   rdeval -s h rdeval/testFiles/random1.fastq
+   rdeval -s c rdeval/testFiles/random1.fastq
 
 To generate a read summary:
 ===========================
 .. code-block:: console
 
-   rdeval -r /path/to/testFiles/random1.fasta
+   rdeval -r rdeval/testFiles/random1.fasta
 
 To generate stats:
 ==================
@@ -92,68 +116,83 @@ To generate stats:
 
    rdeval /path/to/data > /path/to/outfile.stats
 
-To obtain a distribution of quality for each read (c) or both length and quality(l):
+To obtain a distribution of quality for each read (q) or both length and quality(a):
 ====================================================================================
 .. code-block:: console
 
-   rdeval /path/to/testfiles/random1.fastq -q c
-   rdeval /path/to/testfiles/random1.fastq -q l
+   rdeval rdeval/testFiles/random1.fastq -qq
+   rdeval rdevaltestFiles/random1.fastq -qa
 
 To generate a per-read report:
 ==============================
 .. code-block:: console
 
-   rdeval --sequence-report /path/to/testFiles/random1.fasta
+   rdeval --sequence-report rdeval/testFiles/random1.fasta
 
 To filter the reads to be assessed, by length ('l') or quality ('q'), or both:
 ==============================================================================
 .. code-block:: console
 
-   rdeval -f 'l>10' /path/to/testFiles/random1.fasta
-   rdeval -f 'q>10' /path/to/testFiles/random1.fasta
-   rdeval -f 'l>10 & q>10' /path/to/testFiles/random1.fasta
+   rdeval -f 'l>10' rdeval/testFiles/random1.fasta
+   rdeval -f 'q>10' rdeval/testFiles/random1.fasta
+   rdeval -f 'l>10 & q>10' rdeval/testFiles/random1.fasta
 
 To exclude data from analysis, based on read header information in a list [-e/--exclude-list]:
 ==========================================================================
 .. code-block:: console
 
-   rdeval -e header.txt /path/to/testFiles/random1.fasta
+   rdeval -e header.txt rdeval/testFiles/random1.fasta
 
 To include data in the analysis, based on read header information in a list [-i/include-list]:
 ==========================================================================
 .. code-block:: console
 
-   rdeval -i header.txt /path/to/testFiles/random1.fasta
+   rdeval -i header.txt rdeval/testFiles/random1.fasta
 
 To write reads to a file or generate an rd summary file (output options: fa*[.gz], bam, cram, rd):
 ========================================================
 .. code-block:: console
 
-   rdeval -o output1.fa /path/to/testFiles/random1.fastq
+   rdeval -o output1.fa rdeval/testFiles/random1.fastq
 
 To compress all the homopolymers longer than 'n' in the input:
 ==============================================================
 .. code-block:: console
 
-   rdeval --homopolymer-compress 1 /path/to/testFiles/random1.fastq
+   rdeval --homopolymer-compress 1 rdeval/testFiles/random1.fastq
 
 To subsample reads (requires an float between 0 and 1):
 ===================
 .. code-block:: console
 
-    rdeval --sample 0.5 /path/to/testFiles/random1.fastq
+    rdeval --sample 0.5 rdeval/testFiles/random1.fastq
 
 To make subsampling reproducible, use the '--random-seed <int>' option:
 ===================
 .. code-block:: console
 
-    rdeval --sample 0.5 --random-seed 1 /path/to/testFiles/random1.fastq
+    rdeval --sample 0.5 --random-seed 1 rdeval/testFiles/random1.fastq
 
 To print md5 of a .rd file:
 ===========================
 .. code-block:: console
 
-   rdeval --md5 /path/to/testFiles/random2.rd
+   rdeval --md5 rdeval/testFiles/random2.rd
+
+To output data to a .rd file, then to run rdeval on the .rd file:
+=============================
+.. code-block:: console
+
+   rdeval -output1.rd rdeval/testFiles/random1.fastq
+   rdeval output1.rd 
+   rdeval output1.rd -qa
+
+To read a .bam or .cram file:
+=============================
+.. code-block:: console
+
+   rdeval rdeval/testFiles/random3.bam
+   rdeval rdeval/testFiles/random3.cram
 
 To generate a HTML file:
 ========================
