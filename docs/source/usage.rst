@@ -26,6 +26,29 @@ To compile rdeval you need the libraries listed in the :ref:`dependency section 
 
    make -j
 
+To install with conda
+=====================
+
+To install rdeval with conda, first you should install conda, then rdeval using the following commands:
+
+.. code-block:: console
+
+   curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+   bash Miniforge3-Linux-x86_64.sh
+
+Once conda is installed, rdeval can then be installed using the following command:
+
+.. code-block:: console
+
+   conda create --name rdeval --channel conda-forge --channel bioconda --override-channels --strict-channel-priority rdeval
+
+Before using rdeval, you will need to activate the conda environment created, using the following command:
+
+.. code-block:: console
+
+   conda activate rdeval
+
+
 Troubleshooting the Installation
 ================================
 
@@ -138,7 +161,7 @@ This requires the following packages also be installed: tidyverse (v2.0.0), ggEx
 
 .. code-block:: console
 
-   R -e "rmarkdown::render('${RDEVAL}/figures.Rmd', output_file='[output].html')" --args "[rd-file-1].rd" "[rd-file-2].rd"
+   generate_report.sh -i input1.rd [input2.rd ...] -o output_file.html
 
 To display the software version number [-v/--version]:
 =======================================
