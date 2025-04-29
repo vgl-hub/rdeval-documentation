@@ -4,32 +4,10 @@ Usage
 Installation
 ************
 
-Dependencies
-============
-Rdeval relies on three libraries that should be correctly installed in your system:
+To install with conda (preferred method)
+========================================
 
-* `Openssl <https://www.openssl.org/>`_, to compute md5sums
-* `Htslib <https://github.com/samtools/htslib>`_, to work with BAM and CRAM files
-* `zlib <https://github.com/madler/zlib>`_, required for the gzip compression and decompression
-
-To use rdeval, you can either:
-
-* download precompiled builds for your platform from the latest release `here <https://github.com/vgl-hub/rdeval/releases>`_
-* :ref:`compile it from source <Compilation from source>`
-
-Compilation from source
-=======================
-
-To compile rdeval you need the libraries listed in the :ref:`dependency section <Dependencies>` correctly installed under your path, and then simply run the following command in rdeval's main folder:
-
-.. code-block:: console
-
-   make -j
-
-To install with conda
-=====================
-
-To install rdeval with conda, first you should install conda, then rdeval using the following commands:
+To install rdeval with conda, first you should install conda (https://github.com/conda-forge/miniforge, please view the README.md on this page for further details), then rdeval using the following commands:
 
 .. code-block:: console
 
@@ -48,10 +26,38 @@ Before using rdeval, you will need to activate the conda environment created, us
 
    conda activate rdeval
 
-To use rdeval with the static linked binary (linux distrabution only)
+
+Standard installation
+======================
+
+Dependencies
+------------
+Rdeval relies on three libraries that should be correctly installed in your system:
+
+* `Openssl <https://www.openssl.org/>`_, to compute md5sums
+* `Htslib <https://github.com/samtools/htslib>`_, to work with BAM and CRAM files
+* `zlib <https://github.com/madler/zlib>`_, required for the gzip compression and decompression
+
+To use rdeval, you can either:
+
+* download precompiled builds for your platform from the latest release `here <https://github.com/vgl-hub/rdeval/releases>`_
+* :ref:`compile it from source <Compilation from source>`
+
+
+Compilation from source
+-----------------------
+
+To compile rdeval you need the libraries listed in the :ref:`dependency section <Dependencies>` correctly installed under your path, and then simply run the following command in rdeval's main folder:
+
+.. code-block:: console
+
+   make -j
+
+
+To use rdeval with the static linked binary (linux distribution only)
 ======================================================================
 
-This static binary file is availble as a .zip file on the Releases page for rdeval (https://github.com/vgl-hub/rdeval/releases). To use this binary file:
+In cases where installation with conda or installing dependencies proves difficult, a fully static binary file is availble as a .zip file on the Releases page for rdeval, starting from v0.0.6 (https://github.com/vgl-hub/rdeval/releases). To use this binary file:
 
 Download the binary .zip file to your linux machine.
 Unzip the .zip file:
@@ -194,17 +200,21 @@ To read a .bam or .cram file:
    rdeval rdeval/testFiles/random3.bam
    rdeval rdeval/testFiles/random3.cram
 
-To generate a HTML file:
-========================
-This requires the following packages also be installed: tidyverse (v2.0.0), ggExtra (v0.10.1), bit64 (v4.5.2). Please note, the paths for the [output_file] and the [args] need to be hardcoded.
-
-.. code-block:: console
-
-   generate_report.sh -i input1.rd [input2.rd ...] -o output_file.html
-
 To display the software version number [-v/--version]:
 =======================================
 .. code-block:: console
    rdeval -v 
 
 Other command options are available by using the :ref:`help <Help and Usage>` function, described above.
+
+Generation of .rd reports
+#########################
+
+To generate a .rd report:
+=========================
+This requires the following packages also be installed: tidyverse (v2.0.0), ggExtra (v0.10.1), bit64 (v4.5.2).
+
+.. code-block:: console
+
+   generate_report.sh -i input1.rd [input2.rd ...] -o output_file.html
+
