@@ -214,12 +214,14 @@ Generation of .rd reports
 To generate a HTML or PDF file:
 ===============================
 Generating plots requires rhe following packages in R:
-* bit64 (v4.5.2+)
-* tidyverse (v2.0.0+)
-* ggExtra (v0.10.1+)
-* plotly (v4.10.4+)
 
-The packagess can be installed in an R console with the following instructions"
+* `bit64 <https://cran.r-project.org/web/packages/bit64/index.html>`_, (v4.5.2+)
+* `tidyverse <https://www.tidyverse.org/>`_, (v2.0.0+)
+* `ggExtra <https://cran.r-project.org/web/packages/ggExtra/vignettes/ggExtra.html>`_, (v0.10.1+)
+* `plotly <https://plotly.com/r/>`_, (v4.10.4+)
+
+The packages can be installed in an R console with the following instructions:
+
 .. code-block:: console
 
    install.packages("bit64", "tidyverse", "ggExtra", "plotly")
