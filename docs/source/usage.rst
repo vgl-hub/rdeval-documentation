@@ -213,7 +213,7 @@ Generation of .rd reports
 
 To generate a HTML or PDF file:
 ===============================
-Generating plots requires rhe following packages in R:
+Generating plots requires the following packages in R:
 
 * `bit64 <https://cran.r-project.org/web/packages/bit64/index.html>`_, (v4.5.2+)
 * `tidyverse <https://www.tidyverse.org/>`_, (v2.0.0+)
@@ -233,7 +233,7 @@ Generating a PDF file requires installing a LaTeX distribution such as TinyTeX. 
    install.packages("tinytex")
    tinytex::install_tinytex()
 
-Please note that only static plots can be rendered in PDF format. **generate_report.sh** will auomatically generate a HTML file if given "-f pdf" and "--dynamic" as arguments.
+Please note that only static plots can be rendered in PDF format. **generate_report.sh** will auomatically generate a HTML file if given "-f pdf" and "--interactive" as arguments.
 
 The usage is as follows:
 
