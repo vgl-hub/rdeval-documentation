@@ -16,7 +16,7 @@ Example:
 
 .. code-block:: console
 
-   rdeval --cifi-enzyme DpnII cifi_reads.fastq -o cifi_reads.digested.fastq
+   rdeval --cifi-enzyme DpnII testFiles/cifi_reads.fastq -o cifi_reads.digested.fastq
 
 
 ### ``--cifi-out-combinations``
@@ -26,7 +26,7 @@ Example:
 
 .. code-block:: console
 
-   rdeval --cifi-enzyme DpnII --cifi-out-combinations cifi_reads.fastq -p rdeval_
+   rdeval --cifi-enzyme DpnII --cifi-out-combinations testFiles/cifi_reads.fastq -p rdeval_
    
 For each input file, this will generate two PE files with the same file extension, the user prefix (``-p``), and ``_1``, ``_2`` suffixes to the file names.
 
