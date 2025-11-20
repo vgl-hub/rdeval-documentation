@@ -22,4 +22,6 @@ Contents
 .. toctree::
 
    usage
+   rd
+   cifi
    format_specification
