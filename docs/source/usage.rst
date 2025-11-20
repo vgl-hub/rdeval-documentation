@@ -249,7 +249,7 @@ The usage is as follows:
 
 
 PacBio CiFi read digestion
-***************************
+##########################
 
 rdeval supports **PacBio CiFi** data, allowing:
 
