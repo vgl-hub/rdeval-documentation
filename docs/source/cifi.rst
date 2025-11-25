@@ -5,7 +5,7 @@ rdeval supports **PacBio CiFi** data, allowing:
 
 * in-silico restriction digestion of reads   
 * output of all fragment combinations  
-* compatibility with FASTA/FASTQ/BAM/CRAM input  
+* compatibility with FASTA/FASTQ/BAM/CRAM I/O  
 
 Two options enable these features:
 
