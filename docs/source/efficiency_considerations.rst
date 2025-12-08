@@ -114,11 +114,11 @@ cluster environments it is often more convenient and robust to:
 2. Combine the resulting ``.rd`` files at the end of the pipeline.
 
 The final combination step is extremely fast and is described in detail in
-the `rdeval usage documentation <https://rdeval-documentation.readthedocs.io/en/latest/usage.html#to-output-data-to-a-rd-file-then-to-run-rdeval-on-the-rd-file>`_
+the `rdeval usage documentation <https://rdeval-documentation.readthedocs.io/en/latest/usage.html#to-output-data-to-a-rd-file-then-to-run-rdeval-on-the-rd-file>`_.
 
 This approach simplifies resource management (especially memory and I/O) on
 multi-user clusters while preserving parallelism and throughput. It also enables
-the visualization of multiple ``.rd`` results in a single `rdeval report <https://rdeval-documentation.readthedocs.io/en/latest/rd.html#to-generate-a-html-or-pdf-file>`_
+the visualization of multiple ``.rd`` results in a single `rdeval report <https://rdeval-documentation.readthedocs.io/en/latest/rd.html#to-generate-a-html-or-pdf-file>`_.
 
 Notes and feedback
 ------------------
