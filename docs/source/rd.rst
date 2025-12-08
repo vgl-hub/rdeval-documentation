@@ -9,12 +9,18 @@ Generating plots requires the following packages in R:
 * `tidyverse <https://www.tidyverse.org/>`_, (v2.0.0+)
 * `ggExtra <https://cran.r-project.org/web/packages/ggExtra/vignettes/ggExtra.html>`_, (v0.10.1+)
 * `plotly <https://plotly.com/r/>`_, (v4.10.4+)
+* `data.table <https://github.com/Rdatatable/data.table>`_, (v1.17.8+)
+* `cowplot <https://wilkelab.org/cowplot/articles/introduction.html>`_, (v1.2.0+)
+* `ggnewscale <https://eliocamp.github.io/ggnewscale/>`_, (v0.5.2+)
+* `gridExtra <https://github.com/baptiste/gridextra>`_, (v2.3+)
+* `gtable <https://gtable.r-lib.org/>`_, (v0.3.6+)
+
 
 The packages can be installed in an R console with the following instructions:
 
 .. code-block:: console
 
-   install.packages("bit64", "tidyverse", "ggExtra", "plotly")
+   install.packages("bit64", "tidyverse", "ggExtra", "plotly", "data.table", "cowplot", "ggnewscale", "gridExtra", "gtable")
 
 Generating a PDF file requires installing a LaTeX distribution such as TinyTeX. TinyTeX can be installed using the following commands:
 
