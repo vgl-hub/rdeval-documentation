@@ -25,3 +25,4 @@ Contents
    rd
    cifi
    format_specification
+   efficiency_considerations
