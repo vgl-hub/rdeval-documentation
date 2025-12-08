@@ -15,9 +15,9 @@ Default parallelism
 
 By default (values can be changed in the CLI), ``rdeval`` uses:
 
-* ``parallel_files = 4``
-* ``decompression_threads = 4``
-* ``compression_threads = 6``
+* ``parallel-files = 4``
+* ``decompression-threads = 4``
+* ``compression-threads = 6``
 
 This means:
 
@@ -110,7 +110,7 @@ Even though ``rdeval`` can in principle process many files on a single node
 with a large number of CPUs without significant performance degradation, in
 cluster environments it is often more convenient and robust to:
 
-1. Generate **individual ``.rd`` files** for each input file (or logical group of inputs).
+1. Generate individual ``.rd`` files for each input file (or logical group of inputs).
 2. Combine the resulting ``.rd`` files at the end of the pipeline.
 
 The final combination step is extremely fast and is described in detail in
@@ -120,8 +120,7 @@ the usage documentation:
 
 This approach simplifies resource management (especially memory and I/O) on
 multi-user clusters while preserving parallelism and throughput. It also enables
-the visualization of multiple ``.rd`` results in a single report:
-https://rdeval-documentation.readthedocs.io/en/latest/rd.html#to-generate-a-html-or-pdf-file
+the `visualization of multiple ``.rd`` results in a single report <https://rdeval-documentation.readthedocs.io/en/latest/rd.html#to-generate-a-html-or-pdf-file>`_
 
 Notes and feedback
 ------------------
@@ -130,11 +129,11 @@ The current configuration (defaults, buffer sizes and thread scheduling) has
 been tuned for typical high-throughput use cases, but has not yet been
 exhaustively benchmarked across all possible hardware and input types.
 
-Different combinations of:
+Different combinations of options:
 
-* ``parallel_files``
-* ``decompression_threads``
-* ``compression_threads``
+* ``parallel-files``
+* ``decompression-threads``
+* ``compression-threads``
 * ``max-memory``
 
 may yield better performance or memory usage on specific systems, especially
