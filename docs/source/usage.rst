@@ -189,9 +189,18 @@ To output data to a .rd file, then to run rdeval on the .rd file:
 =============================
 .. code-block:: console
 
-   rdeval -output1.rd rdeval/testFiles/random1.fastq
+   rdeval -o output1.rd rdeval/testFiles/random1.fastq
    rdeval output1.rd 
    rdeval output1.rd -qa
+   
+This can also be done on multiple files in parallel, combining the results at the end:
+=============================
+.. code-block:: console
+
+   rdeval -o output1.rd rdeval/testFiles/random1.fastq
+   rdeval -o output2.rd rdeval/testFiles/random2.fastq
+   rdeval output1.rd output2.rd 
+   rdeval output1.rd output2.rd -qa
 
 To read a .bam or .cram file:
 =============================
